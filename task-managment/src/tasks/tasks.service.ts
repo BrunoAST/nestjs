@@ -27,4 +27,10 @@ export class TasksService {
   getTaskById(id: string): ITask {
     return this.tasks.find((task) => task.id === id);
   }
+
+  deleteTask(id: string): void {
+    const itemToBeDeleted = this.tasks.findIndex((task) => task.id === id);
+
+    this.tasks.splice(itemToBeDeleted, 1);
+  }
 }
