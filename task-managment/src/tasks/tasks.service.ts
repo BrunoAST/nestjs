@@ -38,6 +38,10 @@ export class TasksService {
   deleteTask(id: string): void {
     const itemToBeDeleted = this.tasks.findIndex((task) => task.id === id);
 
+    if (itemToBeDeleted < 0) {
+      throw new NotFoundException();
+    }
+
     this.tasks.splice(itemToBeDeleted, 1);
   }
 
