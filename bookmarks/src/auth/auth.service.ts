@@ -30,6 +30,8 @@ export class AuthService {
       ) {
         throw new ForbiddenException('Credentials taken');
       }
+
+      throw error;
     }
   }
 
