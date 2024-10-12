@@ -32,6 +32,9 @@ services:
       - db
     volumes:
       - ./src:/app/src
+      # ensures that anything generated in /app/db/migrations inside the container is mirrored to
+      # ./db/migrations in your local directory.
+      - ./db/migrations:/app/db/migrations
     networks:
       - postgres-network
 
