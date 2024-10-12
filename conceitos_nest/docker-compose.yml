@@ -32,6 +32,8 @@ services:
       - db
     volumes:
       - ./src:/app/src
+    networks:
+      - postgres-network
 
   pgadmin:
     image: dpage/pgadmin4
