@@ -1,0 +1,18 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{BASE_URL}}/pessoas/9/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "nome": "Joel 123",
+    "password": "1234567"
+  }
+}
