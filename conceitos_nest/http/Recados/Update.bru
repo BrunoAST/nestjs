@@ -1,0 +1,19 @@
+meta {
+  name: Update
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{BASE_URL}}/recados/2/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "texto": "Atualizado",
+    "lido": true,
+    "para": "test"
+  }
+}
